@@ -1,0 +1,28 @@
+student1 = "папуша Rергей DdD"
+student2 = "скурський Rаксим DdD"
+
+
+def name_convention(student, first_initial, patronymic):
+    correct_name = ""
+    corrected_patronymic = student.replace("DdD", patronymic)
+    for i in corrected_patronymic:
+        if i == "R":
+            i = first_initial
+        correct_name += i
+    return correct_name.title()
+
+
+student1_corrected_name = name_convention(student1, "с", "Сергеевич")
+student2_corrected_name = name_convention(student2, "м", "Валериевич")
+
+print(student1_corrected_name)
+
+student1_list = [i for i in student1_corrected_name]
+# print(student1_list.count(" "))
+
+
+# proper_name = name_from_names.replace("DdD", "Папуша")
+# print(proper_name)
+# print(name_convention())
+
+
